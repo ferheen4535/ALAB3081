@@ -8,4 +8,5 @@ const n4 = 6;
 // This is a fairly simple operation using
 // arithmetic operators and a comparison.
 const isSum50 = (n1 + n2 + n3 + n4) == 50;
-console.log(isSum50)
+/*part one*/
+
