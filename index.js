@@ -20,3 +20,8 @@ console.log("allDivisibleby5");
 const isOver10= (n1 > n4)
 console.log("isover10");
 /*is the first number larger then last number*/
+
+const arithmeticChain = ((n1 - n2) * n3) % n4;
+console.log(arithmeticChain)
+
+/*find the arithmetic chain remainder*/
