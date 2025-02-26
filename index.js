@@ -10,3 +10,8 @@ const n4 = 10;
 const isSum50 = (n1 + n2 + n3 + n4) === 50;
 
 console.log("Sum is 50:", isSum50);
+/*sum equals 50*/
+
+const allDivisibleby5= (n1 % 5 === 0) || (n2 % 5 === 0) || (n3 % 5 === 0) || (n4 % 5 === 0) 
+console.log("allDivisibleby5");
+/* all numbers are divisible by 5 */
