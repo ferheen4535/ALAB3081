@@ -15,3 +15,8 @@ console.log("Sum is 50:", isSum50);
 const allDivisibleby5= (n1 % 5 === 0) || (n2 % 5 === 0) || (n3 % 5 === 0) || (n4 % 5 === 0) 
 console.log("allDivisibleby5");
 /* all numbers are divisible by 5 */
+
+
+const isOver10= (n1 > n4)
+console.log("isover10");
+/*is the first number larger then last number*/
