@@ -23,5 +23,8 @@ console.log("isover10");
 
 const arithmeticChain = ((n1 - n2) * n3) % n4;
 console.log(arithmeticChain)
-
 /*find the arithmetic chain remainder*/
+
+const isOver25= (n1 + n2 + n3);
+console.log ("isover25");
+/* n = over 25*/
