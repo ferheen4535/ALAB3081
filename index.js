@@ -3,66 +3,117 @@ const n2 = 5;
 const n3 = 20;
 const n4 = 10;
 
-Check one: add up to 50
-This is a fairly simple operation using
-arithmetic operators and a comparison.
+// //sum is equal to 50//
+console.log(`Part One`)
+console.log()
 
 const isSum50 = (n1 + n2 + n3 + n4) === 50;
+console.log("Is the sum 50:", isSum50);
 
-console.log("Sum is 50:", isSum50);
-// /*sum equals 50*/
+console.log()
 
-const allDivisibleby5= (n1 % 5 === 0) || (n2 % 5 === 0) || (n3 % 5 === 0) || (n4 % 5 === 0) 
-console.log("allDivisibleby5");
-// /* all numbers are divisible by 5 */
+//are all number divisible by 5//
+const allDivisibleby5= (n1 % 5 === 0) && (n2 % 5 === 0) && (n3 % 5 === 0) && (n4 % 5 === 0) 
+console.log(`Are all number divisible by 5:`, allDivisibleby5);
 
- const isOver10= (n1 > n4)
-console.log("isover10");
-// /*is the first number larger then last number*/
+console.log()
 
-const arithmeticChain = ((n1 - n2) * n3) % n4;
-console.log(arithmeticChain)
-// /*find the arithmetic chain remainder*/
+//is the first number larger than the last?//
+const isFirstNumberLargerThanLast = (n1 > n4);
+console.log(`Is the first number larger than the last number:`, isFirstNumberLargerThanLast);
 
-const isOver25= (n1 + n2 + n3);
-console.log ("isover25");
-* n = over 25*/
+console.log()
 
-const n1 = 15;
-const n2 = 5;
-const n3 = 20;
-const n4 = 10;
+//subtract the first number from the second number//
+const subFirstSecond = (n1 - n2)
+console.log(`What is 15 - 5:`, subFirstSecond );
 
-// /*part two*/
+console.log()
 
+//multiply the result by the third number//
+const multiply = (subFirstSecond * n3);
+console.log(`What is (15-5) X 20:`, multiply);
 
-const distance = 1500;
-const fuelPerGallon = 3; 
-const totalBudget = 175;
+console.log()
 
-const firstmph = 55;
-const secondmph = 60;
-const thirdmph = 75;
+//divid 200 by 4th number//
+const divide = (multiply / n4);
+console.log(`What is 200/10:`, divide);
 
+console.log()
 
-const totalGallons = distance / fuelPerGallon;
+//check any numbers are over 25, not using the NOT operator//
+const isOver = (n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25);
+console.log(`Are any numbers over 25:`,isOver);
 
-console.log(`Total gallons needed: ${distance / fuelPerGallon} `);
+console.log()
+///PART TWO///
+console.log(`Part Two`)
 
-const totalCostFuel = totalGallons * fuelPerGallon;
-console.log(`total Gallons cost: ${500 * fuelPerGallon}`);
+const miles = 1500
+const fuelbudget = 175
+const cost = 3
 
-const time = distance / firstmph;
-console.log(`mprtime: ${distance / firstmph}`);
+const firstmpr = 30
+const secondmpr = 28
+const thirdmpr = 23
 
-const secondtime = distance / secondmph;
-console.log(`mprtime: ${distance / secondmph}`);
+const firstmph = 55
+const secondmph = 60
+const thirdmph = 75
 
-const thirdtime = distance / thirdmph;
-console.log(`mprtime: ${distance / thirdmph}`);
+//how many gallons of fuel will you need for the entire trip?//
+console.log()
 
-let availablebudget = totalBudget > totalCostFuel;
+const firstMPRgallons = (miles / firstmpr)
+console.log(`How many gallons of fuel for 55 miles per hour:`, firstMPRgallons, `gallons`)
 
-let Budget = firstmph > distance;
+const secondMPRgallons = (miles / secondmpr)
+console.log(`How many gallons of fuel for 60 miles per hour:`, secondMPRgallons, `gallons`)
 
-//second part was kinda confusing for me so I tried different methods to see which ones gave me the right answer//
+const thirdMPRgallons = (miles / thirdmpr)
+console.log(`How many gallons of fuel for 75 miles per hour:`, thirdMPRgallons, `gallons`)
+
+//What are the expenses for each mph and is it in budget?//
+console.log()
+
+const firstcost = (firstMPRgallons * cost);
+console.log(`Total cost of gas for 55 mph will cost:`, `$`,firstcost);
+console.log(`Is this under the budget:`, firstcost < fuelbudget);
+
+const secondcost = (secondMPRgallons * cost);
+console.log(`Total cost of gas for 60 mph will cost:`, `$`,secondcost);
+console.log(`Is this under the budget:`, secondcost < fuelbudget);
+
+const thirdcost = (thirdMPRgallons * cost);
+console.log(`Total cost of gas for 70 mph will cost:`, `$`,thirdcost);
+console.log(`Is this under the budget:`, thirdcost < fuelbudget);
+
+console.log()
+
+//how long will the trip take in hours//
+
+const firsthours = (miles / firstmph)
+console.log(`Traveling at 55mph will take how many hours:`, firsthours, `hours`);
+
+const secondhours = (miles / secondmph)
+console.log(`Traveling at 60mph will take how many hours:`, secondhours, `hours`);
+
+const thirdhours = (miles / thirdmph)
+console.log(`Traveling at 75mph will take how many hours:`, thirdhours, `hours`);
+console.log()
+console.log()
+
+//which option is the best//
+console.log()
+
+const firstoption = ( firstMPRgallons < fuelbudget && firsthours == firsthours );
+console.log(`Traveling at 55 mph is a good option because it fits within the budget.`, firstoption);
+
+const secondoption = ( secondMPRgallons < fuelbudget && firsthours > secondhours );
+console.log(`Traveling at 60 mph is a best option because it fits within the budget in shorter time.`, secondoption);
+
+const thirdoption = ( thirdMPRgallons < fuelbudget && firsthours < thirdhours );
+console.log(`Traveling at 70 mph is a good option because it is within budget.`, thirdoption);
+
+//not sure about this formula//
